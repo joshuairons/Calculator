@@ -1,0 +1,56 @@
+# Function to perform addition
+def add(x, y):
+    return x + y
+
+# Function to perform subtraction
+def subtract(x, y):
+    return x - y
+
+# Function to perform multiplication
+def multiply(x, y):
+    return x * y
+
+# Function to perform division
+def divide(x, y):
+    if y == 0:
+        return "Error! Division by zero."
+    return x / y
+
+# Function to display the calculator menu
+def menu():
+    print("Calculator Menu:")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+
+# Main function to execute the calculator program
+def main():
+    while True:
+        # Display the menu
+        menu()
+        # Get user input for choice
+        choice = input("Enter your choice (1-5): ")
+
+        if choice in ('1', '2', '3', '4'):
+            # Get user input for two numbers
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+
+            if choice == '1':
+                print("Result:", add(num1, num2))
+            elif choice == '2':
+                print("Result:", subtract(num1, num2))
+            elif choice == '3':
+                print("Result:", multiply(num1, num2))
+            elif choice == '4':
+                print("Result:", divide(num1, num2))
+        elif choice == '5':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 5.")
+
+if __name__ == "__main__":
+    main()
